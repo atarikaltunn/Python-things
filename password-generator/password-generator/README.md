@@ -1,1 +1,1 @@
-# Python-things
+a simple, basic password generator program
