@@ -136,6 +136,7 @@ class SignupWindow(QtWidgets.QWidget):
             password = self.user_password1.text()
             connection = sqlite3.connect("../database.db")
             self.cursor.execute("Insert into Users Values(?,?)",(name,password))
+            self.text_area.setText("The registration has been completed successfully.\n")
             connection.commit()
         elif(self.user_name.text() == "" or self.user_name.text() == " "):
             self.text_area.setText("Name can not be empty.\n")
